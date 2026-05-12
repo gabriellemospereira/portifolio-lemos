@@ -23,7 +23,7 @@ html {
 
 body {
     font-family: "Roboto", sans-serif;
-    background: radial-gradient(circle at top right, #00345c, #000 45%);
+    background: radial-gradient(circle at top right, #00345c, #000000 20%);
     color: var(--branco);
 }
 
@@ -43,7 +43,7 @@ body {
 
 
 .menu img {
-    width: 170px;
+    width: 100px;
 }
 
 .menu-nav{
@@ -213,31 +213,74 @@ hero-texto p {
 /* PROJETOS */
 
 .projetos {
-    padding: 80px 10%;
+    margin-top: 100px;
+    margin-bottom: 60px;
     text-align: center;
 }
 
 .cards-projetos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    display: flex;
+    grid-template-columns: repeat(auto-fit, min-max(320px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto ;
+    align-items: start;
 }
 
-.cards-projetos a {
-    padding: 35px;
-    border-radius: 20px;
-    background: rgba(0, 20, 40, 0.8);
+.card-projeto {
+    margin-top: 50px;
+    max-width: 380px;
+    width: 100%;
+    margin:  0 auto;
+    background: rgba(0, 20, 40, 0.85);
     border: 1px solid rgba(0, 157, 255, 0.3);
-    color: white;
-    text-decoration: none;
+    border-radius: 20px;
+    overflow: hidden;
     transition: 0.3s ease;
 }
 
-.cards-projetos a:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 35px rgba(0, 157, 255, 0.35);
-    color: var(--azul);
+.card-projeto:hover {
+    transform: translatey(-15px);
+    box-shadow: 0 0 35px rgba(0, 157, 255, 0.45);
+
+
 }
+
+.card-projeto img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-conteudo {
+    padding: 25px;
+    text-align: left;
+}
+
+.card-conteudo h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.card-conteudo p {
+    color: var(--cinza);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.card-conteudo a {
+    display: block;
+    text-align: center;
+    padding: 14px;
+    border: 1px solid var(--azul);
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+
+
 
 /* RESPONSIVO */
 
@@ -281,3 +324,12 @@ hero-texto p {
     }
 }
 
+
+footer {
+    text-align: center;
+    font-size: 25px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    color: var(--azul);
+    text-shadow: #b8c2cc;
+}
