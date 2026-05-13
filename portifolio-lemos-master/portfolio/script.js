@@ -15,3 +15,21 @@ btnTopo.addEventListener("click", ()=> {
         behavior: "smooth"   
     });
 });
+
+
+const elementos = document.querySelectorAll(
+    ".card-projeto, .skill div, .hero-texto, .hero-imagem"
+);
+
+
+const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("mostrar")
+        }
+    });
+});
+
+elementos.forEach((elementos) => {
+    observer.observe(elementos);
+});

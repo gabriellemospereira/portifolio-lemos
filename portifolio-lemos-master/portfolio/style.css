@@ -81,7 +81,7 @@ body {
 }
 
 
-.hero texto {
+.hero-texto {
     max-width: 600px;
 }
 
@@ -218,15 +218,21 @@ hero-texto p {
     text-align: center;
 }
 
-.cards-projetos {
+.cards-projetos{
     display: flex;
-    grid-template-columns: repeat(auto-fit, min-max(320px, 1fr));
-    gap: 40px;
-    max-width: 1400px;
-    margin: 0 auto ;
-    align-items: start;
-}
 
+    justify-content: center;
+
+    align-items: stretch;
+
+    gap: 40px;
+
+    flex-wrap: wrap;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
 .card-projeto {
     margin-top: 10px;
     max-width: 380px;
@@ -251,6 +257,12 @@ hero-texto p {
     height: 220px;
     object-fit: cover;
     display: block;
+}
+
+
+.mostrar{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .card-conteudo {
@@ -278,6 +290,33 @@ hero-texto p {
     color: white;
     text-decoration: none;
 }
+
+/* ANIMAÇÃO */
+
+.card-projeto,
+.skills div,
+.hero-texto,
+.hero-imagem{
+
+    opacity: 0;
+
+    transform: translateY(80px);
+
+    transition: 1s ease;
+}
+
+.mostrar{
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+
+
+
 
 .btn-github {
     margin-top: 40px;
